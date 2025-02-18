@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: chapter01-hello-world
+
+management:
+  endpoints:
+    web:
+#      base-path: /
+      exposure:
+        include: info, health, refresh
+  health:
+    db:
+      enabled: true
+    diskspace:
+      enabled: true

@@ -1,0 +1,2 @@
+
+GET http://localhost:9001/v1/organization/organizationId/license/licenceId

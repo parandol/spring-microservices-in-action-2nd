@@ -1,0 +1,4 @@
+rootProject.name = 'spring-microservices-in-action-2nd'
+include 'chapter01-hello-world'
+include 'chapter02-license-service'
+include 'chapter03-license-service'
