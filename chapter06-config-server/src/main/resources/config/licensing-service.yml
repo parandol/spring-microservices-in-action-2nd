@@ -1,0 +1,43 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    show-sql: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    test-while-idle: true
+    validation-query: SELECT 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, refresh, env
+    enabled-by-default: true
+  health:
+    db:
+      enabled: true
+    diskspace:
+      enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5000
+    disable-delta: true
+    service-url:
+      defaultZone: http://localhost:9002/eureka
+  instance:
+    prefer-ip-address: true
+    #lease-expiration-duration-in-seconds
+    #lease-renewal-interval-in-seconds
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} # instance-id 를 설정
+
+example:
+  property: I AM THE DEFAULT

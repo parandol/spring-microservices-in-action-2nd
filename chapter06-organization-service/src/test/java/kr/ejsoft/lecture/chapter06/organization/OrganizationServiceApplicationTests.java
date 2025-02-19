@@ -1,4 +1,4 @@
-package kr.ejsoft.lecture.chapter06.license;
+package kr.ejsoft.lecture.chapter06.organization;
 
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +11,7 @@ import org.springframework.test.context.ActiveProfiles;
         replace = AutoConfigureTestDatabase.Replace.NONE
 )
 @ActiveProfiles("dev")
-class LicenseServiceApplicationTests {
+class OrganizationServiceApplicationTests {
 
 //    @Test
     void contextLoads() {

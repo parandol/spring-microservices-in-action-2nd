@@ -1,0 +1,53 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: organization-service
+  profiles:
+    active: dev
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:9001
+      request-connect-timeout: 5000
+      request-read-timeout: 5000
+      fail-fast: false       # true 일 경우 config server에 접속할수 없으면 시작 시 종료. false면 retry 시도 후 내부 기본값 사용
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ejstock_dev
+    username: postgres
+    password: postgres
+    #    password: {cipher} 717455c993683490e5a4bb4eb6d11dc04dbafc83b1bbbaab659ebac7b588630b
+
+management:
+  endpoints:
+    web:
+#      base-path: /
+      exposure:
+        include: info, health, refresh, env
+  health:
+    db:
+      enabled: true
+    diskspace:
+      enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5000
+    disable-delta: true
+    service-url:
+      defaultZone: http://localhost:9002/eureka
+  instance:
+    prefer-ip-address: true
+    #lease-expiration-duration-in-seconds
+    #lease-renewal-interval-in-seconds
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} # instance-id 를 설정
+
+# export ENCRYPT_KEY=.......
+encrypt:
+  key: secretkey

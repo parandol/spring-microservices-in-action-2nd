@@ -27,5 +27,20 @@ spring:
 #          profile-separator: /
 
 # export ENCRYPT_KEY=.......
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5000
+    disable-delta: true
+    service-url:
+      defaultZone: http://localhost:9002/eureka
+  instance:
+    prefer-ip-address: true
+    #lease-expiration-duration-in-seconds
+    #lease-renewal-interval-in-seconds
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} # instance-id 를 설정
+
 encrypt:
   key: secretkey

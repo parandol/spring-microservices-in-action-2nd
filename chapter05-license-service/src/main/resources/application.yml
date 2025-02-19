@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9003
 
 spring:
   application:
@@ -10,7 +10,7 @@ spring:
     import: "optional:configserver:"
   cloud:
     config:
-      uri: http://localhost:9002
+      uri: http://localhost:9001
       request-connect-timeout: 5000
       request-read-timeout: 5000
       fail-fast: false       # true 일 경우 config server에 접속할수 없으면 시작 시 종료. false면 retry 시도 후 내부 기본값 사용
