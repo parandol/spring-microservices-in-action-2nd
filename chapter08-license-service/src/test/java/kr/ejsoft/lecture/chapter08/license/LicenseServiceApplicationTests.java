@@ -1,4 +1,4 @@
-package kr.ejsoft.lecture.chapter05.license;
+package kr.ejsoft.lecture.chapter08.license;
 
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
