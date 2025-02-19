@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: chapter01-hello-world
+    name: licensing-service
 
 management:
   endpoints:

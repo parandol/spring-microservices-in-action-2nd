@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ejstock_dev
+    username: postgres
+#    password: {cipher} 717455c993683490e5a4bb4eb6d11dc04dbafc83b1bbbaab659ebac7b588630b
+    password: postgres
+
+example:
+  property: I AM DEV
