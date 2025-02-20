@@ -39,7 +39,7 @@ spring:
         registration:
           keycloak:
             client-id: ejstock-service
-            client-secret: xNDRZumFpyyN2PZCIypzCR2FQuuy4tLN
+            client-secret:
             scope: openid
         provider:
           keycloak:
